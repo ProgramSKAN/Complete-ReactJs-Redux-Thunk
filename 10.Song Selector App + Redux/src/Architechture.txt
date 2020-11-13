@@ -1,0 +1,48 @@
+SONGS APP
+
+1.without redux
+
+                      APP
+                --list of songs--
+                --selected song--
+                        |
+                        |
+          --------------------------------
+          |                               |
+  --list of songs--                 --selected song--
+  --onSongSelect--                        |
+          |                               |
+      SONGLIST                          SONG DETAIL
+
+
+2.with redux
+                        APP
+                        |
+                        |
+          --------------------------------
+          |                               |
+          |                               |
+      SONGLIST                          SONG DETAIL
+
+
+redux
+>Reducers
+song list reducer
+selected song reducer
+>action creators
+select song
+
+react-redux
+>>>>STORE----------------------------->Provider
+>reducer                                   |
+--song list reducer                      APP
+--selected song reducer                     |
+                                            |
+>>>>Action Creators                       Connect  >communicates with provider using react context system
+--select song                               |
+                                        song list
+
+
+
+
+

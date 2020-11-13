@@ -1,0 +1,39 @@
+###### Data Loding with redux in this app
+----------------------------------------------------------------
+1.component gets rendered on the screen                         |
+2.component's 'componentDidMount' lifecycle method gets called  |->components are generally responsible for fetching the data they need by calling an action creator
+3.we call the action from 'componentDidMount'                   |
+---------------------------------------------------------------------------------
+4.Action creator runs code to make API request                                  |
+5.API responds with data                                                        |->Action creators are responsible for making API requests (using Redux-Thunk)
+6.Action creator returns an 'Action' with fetched dataon the 'payload' property |
+-----------------------------------------------------------------------------------------------------
+7.some rerender sees the action, returns the data off the payload                                    |->we fetched data into component nu generating new statein our redux store, then getting that into our component through mapStateToProps
+7.because we generated some new state object, react/react-redux cause our React app to be rerendered.|
+------------------------------------------------------------------------------------------------------
+
+
+##### React-redux flow
+1.Action creator called
+2.Action returned
+3.Action sent to all reducers
+4.reducers run
+
+##### Redux-Thunk
+        Action creator
+               |
+    Action or Something either an object or function
+                |
+            Dispatch <------------------------------------------------------------------------------------New Action
+                |                                                                                               |    
+            Action /Something                                                                                  |
+                |                                                                                              |
+            are u a function?                                                                      request complete,DISPATCH ACTION manually
+                |                                                                                            |
+        -----------------                                                                          wait for the request to finish
+        |               |                                                                                   |
+       No              Yes-->thunk will call you with DISPATCH and GETSTATE functions.----->Function invoked with 'DISPATCH'
+        |                   go ahead and dispatch actions at your leisure
+        |
+    Reducers
+
