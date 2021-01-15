@@ -1,0 +1,35 @@
+{
+  "streams": [
+    {
+      "title": "first stream",
+      "description": "this is a great stream",
+      "id": 1
+    },
+    {
+      "title": "another stream",
+      "description": "this is another stream",
+      "id": 2
+    },
+    {
+      "title": "userid stream",
+      "description": "this stream has userid",
+      "id": 3
+    },
+    {
+      "title": "dnfhdf",
+      "description": "jffjfjfj",
+      "id": 4
+    },
+    {
+      "title": "refactor stream",
+      "description": "this stream is about code reuse!!",
+      "id": 5
+    },
+    {
+      "title": "programmatic navigation",
+      "description": "programmatic navigation",
+      "userId": "117870847043662023724",
+      "id": 6
+    }
+  ]
+}
